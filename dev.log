@@ -1,0 +1,29 @@
+
+> rest-express@1.0.0 dev
+> cross-env NODE_ENV=development tsx server/index.ts
+
+11:06:27 PM [express] serving on port 5000
+
+A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+11:10:26 PM [express] GET /api/auth/user 304 in 656ms :: {"id":"basic-raze.priv-gmail.com","organizat…
+Client connected: yF0fHawLb_tD56hbAAAB
+Client yF0fHawLb_tD56hbAAAB joined organization room: org:cc25b90c-3e98-4d27-a07f-04308a7cdbce
+11:10:27 PM [express] GET /api/calls 200 in 297ms :: []
+11:10:27 PM [express] GET /api/ai-agents 304 in 646ms :: [{"id":"59293e13-78de-4df1-ad3a-322555336cda…
+11:10:27 PM [express] GET /api/phone-numbers 304 in 768ms :: [{"id":"86e74fd4-9bf7-4182-a1ef-5004deb7…
+Client disconnected: yF0fHawLb_tD56hbAAAB
+11:10:40 PM [express] GET /api/auth/user 304 in 621ms :: {"id":"basic-raze.priv-gmail.com","organizat…
+Client connected: DgPWViMumneUqrdWAAAD
+Client DgPWViMumneUqrdWAAAD joined organization room: org:cc25b90c-3e98-4d27-a07f-04308a7cdbce
+11:10:41 PM [express] GET /api/ai-agents 304 in 277ms :: [{"id":"59293e13-78de-4df1-ad3a-322555336cda…
+11:10:46 PM [express] POST /api/ai-agents/59293e13-78de-4df1-ad3a-322555336cda/sync 200 in 148ms
+11:10:47 PM [express] POST /api/ai-agents/59293e13-78de-4df1-ad3a-322555336cda/sync 200 in 146ms
+11:11:46 PM [express] POST /api/ai-agents/59293e13-78de-4df1-ad3a-322555336cda/sync 200 in 591ms
+Client disconnected: DgPWViMumneUqrdWAAAD
+11:11:52 PM [express] GET /api/auth/user 304 in 650ms :: {"id":"basic-raze.priv-gmail.com","organizat…
+Client connected: 37eC34kB6QvY-e45AAAF
+Client 37eC34kB6QvY-e45AAAF joined organization room: org:cc25b90c-3e98-4d27-a07f-04308a7cdbce
+11:11:53 PM [express] GET /api/calls 304 in 303ms :: []
+11:11:53 PM [express] GET /api/ai-agents 304 in 802ms :: [{"id":"59293e13-78de-4df1-ad3a-322555336cda…
+11:11:53 PM [express] GET /api/phone-numbers 304 in 800ms :: [{"id":"86e74fd4-9bf7-4182-a1ef-5004deb7…
+11:12:16 PM [vite] hmr update /src/pages/AIAgents.tsx, /src/index.css?v=X7ajzoJ2png_mBwYHDCIz

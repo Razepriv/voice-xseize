@@ -1,0 +1,380 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   MODERN PURPLE & ORANGE THEME
+   Vibrant, clean design system
+   ======================================== */
+
+/* LIGHT MODE (Default) */
+:root {
+  /* Backgrounds */
+  --bg-primary: 240 10% 98%;         /* #F5F5F7 */
+  --bg-secondary: 0 0% 100%;         /* #FFFFFF */
+  --bg-sidebar: 0 0% 100%;           /* #FFFFFF */
+  --bg-card: 0 0% 100%;              /* #FFFFFF */
+  
+  /* Core Colors */
+  --background: 240 10% 98%;         /* Light gray/lavender tint */
+  --foreground: 240 10% 10%;         /* Dark gray text */
+  
+  /* Text Colors */
+  --text-primary: 240 10% 10%;       /* #1A1A1C */
+  --text-secondary: 240 5% 40%;      /* #616166 */
+  --text-muted: 240 5% 60%;          /* #949499 */
+  
+  /* Buttons */
+  --btn-primary-bg: 265 80% 60%;     /* Purple */
+  --btn-primary-text: 0 0% 100%;     /* White */
+  --btn-secondary-bg: 265 80% 96%;   /* Light Purple */
+  --btn-secondary-text: 265 80% 40%; /* Dark Purple */
+  --btn-secondary-border: 265 80% 90%; /* Light Purple Border */
+  
+  /* Borders & Dividers */
+  --border-color: 240 10% 90%;       /* #E1E1E6 */
+  --divider: 240 10% 94%;            /* #EBEBEF */
+  
+  /* Component Colors */
+  --border: 240 10% 90%;             /* #E1E1E6 */
+  --input: 240 10% 90%;              /* #E1E1E6 */
+  --ring: 265 80% 60%;               /* Purple focus ring */
+  
+  /* Cards */
+  --card: 0 0% 100%;                 /* White */
+  --card-foreground: 240 10% 10%;    /* Dark gray */
+  --card-border: 240 10% 94%;        /* Very light border */
+  
+  /* Sidebar */
+  --sidebar: 0 0% 100%;              /* White */
+  --sidebar-foreground: 240 10% 40%; /* Gray icons */
+  --sidebar-border: 240 10% 94%;     /* Light border */
+  --sidebar-primary: 265 80% 60%;    /* Purple active */
+  --sidebar-primary-foreground: 0 0% 100%; /* White */
+  --sidebar-accent: 265 80% 96%;     /* Light Purple hover */
+  --sidebar-accent-foreground: 265 80% 40%; /* Dark Purple */
+  --sidebar-ring: 265 80% 60%;       /* Purple */
+  
+  /* Popover */
+  --popover: 0 0% 100%;              /* White */
+  --popover-foreground: 240 10% 10%; /* Dark gray */
+  --popover-border: 240 10% 90%;     /* Light border */
+  
+  /* Primary */
+  --primary: 265 80% 60%;            /* Purple */
+  --primary-foreground: 0 0% 100%;   /* White */
+  
+  /* Secondary */
+  --secondary: 265 80% 96%;          /* Light Purple */
+  --secondary-foreground: 265 80% 40%; /* Dark Purple */
+  
+  /* Muted */
+  --muted: 240 10% 96%;              /* Very light gray */
+  --muted-foreground: 240 5% 60%;    /* Gray */
+  
+  /* Accent */
+  --accent: 25 90% 60%;              /* Orange */
+  --accent-foreground: 0 0% 100%;    /* White */
+  
+  /* Destructive */
+  --destructive: 0 84% 60%;          /* Red */
+  --destructive-foreground: 0 0% 100%; /* White */
+  
+  /* Status Colors */
+  --success: 142 76% 36%;            /* Green */
+  --warning: 38 92% 50%;             /* Amber */
+  --error: 0 84% 60%;                /* Red */
+  --info: 217 91% 60%;               /* Blue */
+  
+  /* Charts */
+  --chart-1: 265 80% 60%;            /* Purple */
+  --chart-2: 25 90% 60%;             /* Orange */
+  --chart-3: 190 80% 60%;            /* Cyan */
+  --chart-4: 340 80% 60%;            /* Pink */
+  --chart-5: 45 90% 60%;             /* Yellow */
+  
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', Menlo, monospace;
+  
+  --radius: 1rem;                    /* Rounded corners */
+  --spacing: 0.25rem;
+  
+  /* Shadows (Soft & Colored) */
+  --shadow-2xs: 0px 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-xs: 0px 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0px 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0px 12px 32px rgba(0, 0, 0, 0.10);
+  --shadow-xl: 0px 16px 48px rgba(0, 0, 0, 0.12);
+  --shadow-2xl: 0px 24px 64px rgba(0, 0, 0, 0.14);
+  
+  /* Elevation system */
+  --button-outline: rgba(0, 0, 0, 0.10);
+  --badge-outline: rgba(0, 0, 0, 0.05);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0, 0, 0, 0.03);
+  --elevate-2: rgba(0, 0, 0, 0.08);
+  
+  /* Borders with calc */
+  --primary-border: hsl(var(--primary));
+  --secondary-border: hsl(var(--secondary));
+  --muted-border: hsl(var(--muted));
+  --accent-border: hsl(var(--accent));
+  --destructive-border: hsl(var(--destructive));
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+}
+
+/* DARK MODE */
+.dark {
+  /* Backgrounds */
+  --bg-primary: 240 10% 10%;         /* #1A1A1C */
+  --bg-secondary: 240 10% 14%;       /* #242426 */
+  --bg-sidebar: 240 10% 10%;         /* #1A1A1C */
+  --bg-card: 240 10% 12%;            /* #1F1F21 */
+  
+  /* Core Colors */
+  --background: 240 10% 10%;         /* Dark gray background */
+  --foreground: 240 10% 98%;         /* White text */
+  
+  /* Text Colors */
+  --text-primary: 240 10% 98%;       /* #FFFFFF */
+  --text-secondary: 240 5% 63%;      /* #A0A0A0 */
+  --text-muted: 240 5% 40%;          /* #666666 */
+  
+  /* Buttons */
+  --btn-primary-bg: 265 80% 60%;     /* Purple */
+  --btn-primary-text: 0 0% 100%;     /* White */
+  --btn-secondary-bg: 265 80% 20%;   /* Dark Purple */
+  --btn-secondary-text: 265 80% 90%; /* Light Purple */
+  --btn-secondary-border: 265 80% 30%; /* Dark Purple Border */
+  
+  /* Borders & Dividers */
+  --border-color: 240 10% 20%;       /* #333336 */
+  --divider: 240 10% 16%;            /* #29292C */
+  
+  /* Component Colors */
+  --border: 240 10% 20%;             /* #333336 */
+  --input: 240 10% 20%;              /* #333336 */
+  --ring: 265 80% 60%;               /* Purple focus ring */
+  
+  /* Cards */
+  --card: 240 10% 12%;               /* Dark gray */
+  --card-foreground: 240 10% 98%;    /* White */
+  --card-border: 240 10% 20%;        /* Dark border */
+  
+  /* Sidebar */
+  --sidebar: 240 10% 10%;            /* Dark gray */
+  --sidebar-foreground: 240 10% 60%; /* Gray icons */
+  --sidebar-border: 240 10% 20%;     /* Dark border */
+  --sidebar-primary: 265 80% 60%;    /* Purple active */
+  --sidebar-primary-foreground: 0 0% 100%; /* White */
+  --sidebar-accent: 265 80% 20%;     /* Dark Purple hover */
+  --sidebar-accent-foreground: 265 80% 90%; /* Light Purple */
+  --sidebar-ring: 265 80% 60%;       /* Purple */
+  
+  /* Popover */
+  --popover: 240 10% 12%;            /* Dark gray */
+  --popover-foreground: 240 10% 98%; /* White */
+  --popover-border: 240 10% 20%;     /* Dark border */
+  
+  /* Primary */
+  --primary: 265 80% 60%;            /* Purple */
+  --primary-foreground: 0 0% 100%;   /* White */
+  
+  /* Secondary */
+  --secondary: 265 80% 20%;          /* Dark Purple */
+  --secondary-foreground: 265 80% 90%; /* Light Purple */
+  
+  /* Muted */
+  --muted: 240 10% 16%;              /* Dark gray */
+  --muted-foreground: 240 5% 60%;    /* Gray */
+  
+  /* Accent */
+  --accent: 25 90% 60%;              /* Orange */
+  --accent-foreground: 0 0% 100%;    /* White */
+  
+  /* Destructive */
+  --destructive: 0 84% 60%;          /* Red */
+  --destructive-foreground: 0 0% 100%; /* White */
+  
+  /* Charts */
+  --chart-1: 265 80% 60%;            /* Purple */
+  --chart-2: 25 90% 60%;             /* Orange */
+  --chart-3: 190 80% 60%;            /* Cyan */
+  --chart-4: 340 80% 60%;            /* Pink */
+  --chart-5: 45 90% 60%;             /* Yellow */
+  
+  /* Shadows */
+  --shadow-2xs: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-xs: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0px 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0px 12px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0px 16px 48px rgba(0, 0, 0, 0.6);
+  --shadow-2xl: 0px 24px 64px rgba(0, 0, 0, 0.7);
+  
+  /* Elevation system */
+  --button-outline: rgba(255, 255, 255, 0.10);
+  --badge-outline: rgba(255, 255, 255, 0.05);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255, 255, 255, 0.04);
+  --elevate-2: rgba(255, 255, 255, 0.09);
+  
+  /* Borders with calc */
+  --primary-border: hsl(var(--primary));
+  --secondary-border: hsl(var(--secondary));
+  --muted-border: hsl(var(--muted));
+  --accent-border: hsl(var(--accent));
+  --destructive-border: hsl(var(--destructive));
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    letter-spacing: -0.011em; /* Tighter tracking for minimal aesthetic */
+  }
+  
+  /* Premium typography hierarchy */
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+  
+  h2 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+  
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+  
+  h4 {
+    @apply text-xl font-medium;
+  }
+  
+  /* Subtle transitions */
+  button, a, [role="button"] {
+    @apply transition-all duration-150;
+  }
+}
+
+/**
+ * Elevation System
+ * Provides subtle interaction feedback through opacity/brightness
+ */
+@layer utilities {
+  
+  /* Hide search cancel button */
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  /* Placeholder for contentEditable */
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  /* Escape hatches for default interactions */
+  .no-default-hover-elevate {}
+  .no-default-active-elevate {}
+
+  /* Toggle elevation (background layer) */
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  /* Hover/Active elevation (foreground layer) */
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after {
+    inset: -1px;
+  }
+  
+  /* Minimal hover effects for cards */
+  .card-hover {
+    @apply transition-all duration-200;
+  }
+  
+  .card-hover:hover {
+    @apply -translate-y-0.5 shadow-md;
+  }
+  
+  /* Status indicators */
+  .status-active {
+    @apply bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400;
+  }
+  
+  .status-inactive {
+    @apply bg-muted text-muted-foreground;
+  }
+  
+  .status-pending {
+    @apply bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400;
+  }
+  
+  /* Glassmorphism utilities */
+  .glass {
+    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-sm dark:bg-black/70 dark:border-white/10;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/40 shadow-sm dark:bg-black/40 dark:border-white/10;
+  }
+}

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "0e8f6fc2-fd2f-4045-b8b7-58fc8eab5edf",
+    "contactName": null,
+    "contactPhone": "+918617358464",
+    "status": "initiated",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": "e116634f-d65a-4ac2-92db-6067403bc8f6"
+  },
+  {
+    "id": "b9d6ac10-648a-412e-8e56-8fb3ddbd05cc",
+    "contactName": "Abhi",
+    "contactPhone": "+917800039987",
+    "status": "initiated",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": "6b4901be-0a30-4e95-ad30-d9a6be407682"
+  },
+  {
+    "id": "ac5e68b9-b9f5-44d5-b3b5-f65ecd9e7c60",
+    "contactName": "Abhi",
+    "contactPhone": "+917800039987",
+    "status": "initiated",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": "848df4f9-a5dc-4b7c-b926-0c6630b71ecd"
+  },
+  {
+    "id": "c6a75234-146e-45f3-95d6-81428ab17450",
+    "contactName": "Abhi",
+    "contactPhone": "+917800039987",
+    "status": "initiated",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": "7d1fe061-1778-4a0e-b200-6269c0c67a27"
+  },
+  {
+    "id": "c213d75b-b997-49b2-9300-9649b244f0de",
+    "contactName": "Abhi",
+    "contactPhone": "+917800039987",
+    "status": "initiated",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": "e6cf2819-8d45-4775-97aa-abefeb8b0c3a"
+  },
+  {
+    "id": "f44eeb63-fb93-49cb-a4af-8426472cce3f",
+    "contactName": "Abhi",
+    "contactPhone": "+917800039987",
+    "status": "initiated",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": "22607722-51d1-4856-911b-0d70535a29a3"
+  },
+  {
+    "id": "d2ca7b81-2a09-48bc-b430-a051d8eff950",
+    "contactName": "Yatri",
+    "contactPhone": "+917007126288",
+    "status": "initiated",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": "1a054448-92b9-46e8-acf0-94216a56a972"
+  },
+  {
+    "id": "b0e436c2-9639-40c9-8cdd-535c76f2fb07",
+    "contactName": "Abhishek",
+    "contactPhone": "+917007126288",
+    "status": "initiated",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": "737df246-c113-4c1a-a06d-3f47e20b4623"
+  },
+  {
+    "id": "7e4ee5b0-3c00-4c5e-a526-6c25d722da11",
+    "contactName": "dev",
+    "contactPhone": "+918617358464",
+    "status": "cancelled",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": "f0378bc3-8405-49f2-af75-016b04b878e2"
+  },
+  {
+    "id": "396131a0-ce34-4d1b-b687-9367e8d37a32",
+    "contactName": "Abhi",
+    "contactPhone": "7800039987",
+    "status": "initiated",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": null
+  },
+  {
+    "id": "bc05b775-42e9-4f90-8907-12c28cc52529",
+    "contactName": "dev",
+    "contactPhone": "+918617358464",
+    "status": "initiated",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": "b67b1dea-8b79-4e0c-af26-2df2a63b51d2"
+  },
+  {
+    "id": "aafb5cd6-dbd2-458b-80b4-b6cf8a663adc",
+    "contactName": "Sunny",
+    "contactPhone": "8790542862",
+    "status": "cancelled",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": null
+  },
+  {
+    "id": "b7275167-6e60-42b4-95bf-f751e8d9f357",
+    "contactName": "Sunny",
+    "contactPhone": "+918790542862",
+    "status": "cancelled",
+    "duration": null,
+    "recordingUrl": null,
+    "transcription": "✗",
+    "bolnaCallId": "a6911f44-98e7-4c20-82fc-ca6867f6d7bf"
+  }
+]

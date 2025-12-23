@@ -1,0 +1,22 @@
+// Add Jest and React Testing Library for full-stack and UI tests
+{
+  "name": "jest",
+  "version": "^29.0.0"
+}
+// For TypeScript support
+{
+  "name": "ts-jest",
+  "version": "^29.0.0"
+}
+{
+  "name": "@testing-library/react",
+  "version": "^14.0.0"
+}
+{
+  "name": "@testing-library/jest-dom",
+  "version": "^6.0.0"
+}
+{
+  "name": "supertest",
+  "version": "^6.3.3"
+}

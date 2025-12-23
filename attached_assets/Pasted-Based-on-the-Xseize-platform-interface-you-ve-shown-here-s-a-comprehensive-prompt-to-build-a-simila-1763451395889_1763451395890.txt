@@ -1,0 +1,494 @@
+Based on the Xseize platform interface you've shown, here's a comprehensive prompt to build a similar AI Voice Agent platform with your requested minimal white and black theme:
+
+---
+
+## **Prompt: Build AI Voice Agent Platform - Minimal Black & White Theme**
+
+Create a fully functional AI Voice Agent platform exactly like the Xseize interface shown, but with a **strict minimal black and white theme**. Replicate all features and layouts from the reference while applying the minimal aesthetic.
+
+### **🎨 THEME REQUIREMENTS (MANDATORY):**
+
+```css
+/* LIGHT MODE (Default) */
+:root {
+  /* Backgrounds */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FAFAFA;
+  --bg-sidebar: #FFFFFF;
+  --bg-card: #FFFFFF;
+  
+  /* Text */
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  
+  /* Buttons */
+  --btn-primary-bg: #000000;
+  --btn-primary-text: #FFFFFF;
+  --btn-secondary-bg: #FFFFFF;
+  --btn-secondary-text: #000000;
+  --btn-secondary-border: #000000;
+  
+  /* Borders & Dividers */
+  --border-color: #E5E5E5;
+  --divider: #F0F0F0;
+  
+  /* Status Colors (Minimal accents) */
+  --success: #000000;
+  --warning: #666666;
+  --error: #000000;
+  --info: #333333;
+}
+
+/* DARK MODE */
+.dark {
+  /* Backgrounds */
+  --bg-primary: #000000;
+  --bg-secondary: #0A0A0A;
+  --bg-sidebar: #000000;
+  --bg-card: #0A0A0A;
+  
+  /* Text */
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --text-muted: #666666;
+  
+  /* Buttons */
+  --btn-primary-bg: #FFFFFF;
+  --btn-primary-text: #000000;
+  --btn-secondary-bg: #000000;
+  --btn-secondary-text: #FFFFFF;
+  --btn-secondary-border: #FFFFFF;
+  
+  /* Borders & Dividers */
+  --border-color: #1A1A1A;
+  --divider: #0F0F0F;
+}
+```
+
+### **📋 EXACT FEATURES TO IMPLEMENT:**
+
+#### **1. SIDEBAR NAVIGATION (Left Panel)**
+
+```javascript
+const sidebarSections = {
+  aiVoiceSystem: {
+    title: "AI VOICE SYSTEM",
+    items: [
+      { icon: "📊", label: "Dashboard", subtitle: "Overview & analytics", active: true },
+      { icon: "📞", label: "Calls", subtitle: "Voice calls & history" },
+      { icon: "🤖", label: "AI Agents", subtitle: "Voice AI assistants", badge: "6/6" },
+      { icon: "📜", label: "Call History", subtitle: "Call transcripts & logs" }
+    ]
+  },
+  crmLeadManagement: {
+    title: "CRM & LEAD MANAGEMENT",
+    items: [
+      { icon: "👥", label: "Leads", badge: "NEW", subtitle: "Lead management & CRM" },
+      { icon: "🔄", label: "Pipelines", subtitle: "Sales pipeline setup" },
+      { icon: "👤", label: "Contacts", subtitle: "Customer database" }
+    ]
+  },
+  businessManagement: {
+    title: "BUSINESS MANAGEMENT",
+    items: [
+      { icon: "📚", label: "Knowledge Base", subtitle: "AI training data" },
+      { icon: "📈", label: "Analytics", subtitle: "Usage & insights" },
+      { icon: "💳", label: "Billing", subtitle: "Usage & payments" }
+    ]
+  },
+  bottomActions: [
+    { icon: "⚙️", label: "Settings" },
+    { icon: "📞", label: "New Call", primary: true }
+  ]
+}
+```
+
+**Sidebar Styling:**
+- Width: 260px (desktop), 280px (expanded mobile)
+- White background (light mode), Black background (dark mode)
+- Smooth hover states with background color change
+- Active item: Black background with white text (light mode)
+- Collapsible on mobile with hamburger menu
+
+#### **2. MAIN DASHBOARD VIEW**
+
+**Header Section:**
+```jsx
+<HeaderGreeting>
+  <h1>Good {timeOfDay}, {userName}! 👋</h1>
+  <p>Manage your AI voice agents and monitor call performance</p>
+  <HeaderActions>
+    <Button variant="secondary">
+      ➕ New Agent
+    </Button>
+    <Button variant="primary">
+      📞 Make Call
+    </Button>
+  </HeaderActions>
+</HeaderGreeting>
+```
+
+**Metrics Cards (Top Row):**
+```javascript
+const metricsCards = [
+  {
+    icon: "📞",
+    label: "Total Calls",
+    value: "10",
+    change: null,
+    color: "black"
+  },
+  {
+    icon: "🤖",
+    label: "AI Agents",
+    value: "6",
+    badge: "6/6",
+    color: "black"
+  },
+  {
+    icon: "✅",
+    label: "Success Rate",
+    value: "0%",
+    change: "0%",
+    color: "black"
+  },
+  {
+    icon: "💬",
+    label: "Conversations",
+    value: "0",
+    badge: "0 today",
+    color: "black"
+  },
+  {
+    icon: "💰",
+    label: "Usage Cost",
+    value: "$0.00",
+    badge: "Today",
+    color: "black"
+  }
+];
+```
+
+**Card Styling:**
+- Pure white cards with subtle shadow: `box-shadow: 0 1px 3px rgba(0,0,0,0.08)`
+- Border: 1px solid #E5E5E5
+- Padding: 24px
+- Border-radius: 12px
+- Hover effect: Transform translateY(-2px)
+
+#### **3. TAB NAVIGATION**
+
+```jsx
+<TabNavigation>
+  <Tab active>🔍 Overview</Tab>
+  <Tab>🤖 AI System</Tab>
+  <Tab>📊 Analytics</Tab>
+</TabNavigation>
+```
+
+Styling:
+- Active tab: Black text with bottom border (2px black)
+- Inactive: Gray text (#666666)
+- No background colors, just borders and text
+
+#### **4. RECENT CALLS SECTION**
+
+```jsx
+<RecentCallsSection>
+  <SectionHeader>
+    <h2>Recent Calls</h2>
+    <Link>View All →</Link>
+  </SectionHeader>
+  
+  <CallsList>
+    {calls.map(call => (
+      <CallCard key={call.id}>
+        <CallIcon>📞</CallIcon>
+        <CallInfo>
+          <ContactName>{call.contact}</ContactName>
+          <PhoneNumber>{call.phone} • AI Agent</PhoneNumber>
+        </CallInfo>
+        <CallStatus>{call.status}</CallStatus>
+        <CallDate>{call.date}</CallDate>
+        <ViewDetailsBtn>View Details</ViewDetailsBtn>
+      </CallCard>
+    ))}
+  </CallsList>
+</RecentCallsSection>
+```
+
+#### **5. TODAY'S PERFORMANCE PANEL**
+
+```jsx
+<PerformancePanel>
+  <PanelHeader>
+    <h3>⚡ Today's Performance</h3>
+    <Subtitle>Real-time metrics for today</Subtitle>
+  </PanelHeader>
+  
+  <MetricsList>
+    <Metric>
+      <Label>Success Rate</Label>
+      <Value>0%</Value>
+      <ProgressBar value={0} />
+    </Metric>
+    
+    <Metric>
+      <Label>Active Agents</Label>
+      <Value>6/6</Value>
+      <ProgressBar value={100} />
+    </Metric>
+    
+    <Metric>
+      <Label>Avg Call Duration</Label>
+      <Value>0m 0s</Value>
+    </Metric>
+    
+    <ConversationsToday>
+      <BigNumber>0</BigNumber>
+      <Label>Conversations Today</Label>
+    </ConversationsToday>
+  </MetricsList>
+</PerformancePanel>
+```
+
+#### **6. AI AGENTS PAGE LAYOUT**
+
+```jsx
+<AgentsGrid>
+  {agents.map(agent => (
+    <AgentCard key={agent.id}>
+      <CardHeader>
+        <AgentName>{agent.name}</AgentName>
+        <MoreOptions>⋯</MoreOptions>
+      </CardHeader>
+      
+      <AgentDescription>
+        {agent.description}
+      </AgentDescription>
+      
+      <AgentDetails>
+        <DetailRow>
+          <Icon>🎤</Icon>
+          <Text>Voice: {agent.voice}</Text>
+        </DetailRow>
+        <DetailRow>
+          <Icon>🌐</Icon>
+          <Text>{agent.language}</Text>
+        </DetailRow>
+      </AgentDetails>
+      
+      <AgentStats>
+        <Stat>
+          <Icon>📅</Icon>
+          <Label>Last used</Label>
+          <Value>{agent.lastUsed}</Value>
+        </Stat>
+        <Stat>
+          <Icon>🤖</Icon>
+          <Label>Model</Label>
+          <Value>{agent.model}</Value>
+        </Stat>
+        <Stat>
+          <Icon>⏱️</Icon>
+          <Label>Max duration</Label>
+          <Value>{agent.maxDuration}</Value>
+        </Stat>
+      </AgentStats>
+      
+      <MetricsBar>
+        <Metric>📊 {agent.calls}</Metric>
+        <Metric>💬 {agent.messages}</Metric>
+        <Metric>⚡ {agent.rating}</Metric>
+      </MetricsBar>
+      
+      <CardActions>
+        <Button variant="secondary">⚙️ Manage</Button>
+        <Button variant="primary">📞 Make Call</Button>
+      </CardActions>
+    </AgentCard>
+  ))}
+</AgentsGrid>
+```
+
+#### **7. CALL HISTORY TABLE**
+
+```jsx
+<CallHistoryTable>
+  <TableHeader>
+    <SearchBar placeholder="Search by contact or phone..." />
+    <FilterDropdown>Filter by status</FilterDropdown>
+    <DateRangePicker />
+    <ExportButton>⬇️ Export</ExportButton>
+    <NewCallButton>📞 New Call</NewCallButton>
+  </TableHeader>
+  
+  <Table>
+    <thead>
+      <tr>
+        <th>Contact</th>
+        <th>Phone</th>
+        <th>Status</th>
+        <th>Outcome</th>
+        <th>Agent</th>
+        <th>Date & Time</th>
+        <th>Duration</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {callHistory.map(call => (
+        <TableRow key={call.id}>
+          <td>
+            <Avatar>{call.contact[0]}</Avatar>
+            <ContactName>{call.contact}</ContactName>
+          </td>
+          <td>{call.phone}</td>
+          <td><StatusBadge status={call.status} /></td>
+          <td>{call.outcome || '-'}</td>
+          <td>{call.agent || '-'}</td>
+          <td>{call.dateTime}</td>
+          <td>{call.duration || '-'}</td>
+          <td>
+            <ActionMenu>⋯</ActionMenu>
+          </td>
+        </TableRow>
+      ))}
+    </tbody>
+  </Table>
+</CallHistoryTable>
+```
+
+### **📱 RESPONSIVE BEHAVIOR:**
+
+**Mobile (320px - 767px):**
+```css
+/* Bottom Navigation */
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  border-top: 1px solid #E5E5E5;
+  height: 60px;
+}
+
+/* Cards Stack Vertically */
+.metrics-grid {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* Simplified Tables → Card View */
+.table-mobile {
+  display: block;
+}
+.table-row-mobile {
+  display: block;
+  padding: 16px;
+  border: 1px solid #E5E5E5;
+  margin-bottom: 8px;
+}
+```
+
+**Tablet (768px - 1023px):**
+```css
+.metrics-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sidebar {
+  position: fixed;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+```
+
+**Desktop (1024px+):**
+```css
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.metrics-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.agents-grid {
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+}
+```
+
+### **⚡ INTERACTIVE FEATURES:**
+
+1. **Real-time Updates:**
+   - WebSocket for call status
+   - Live metric updates
+   - Push notifications
+
+2. **Click-to-Call:**
+   - Desktop: WebRTC dialer
+   - Mobile: Native dialer integration
+
+3. **Agent Management:**
+   - Drag to reorder
+   - Quick actions menu
+   - Inline editing
+
+4. **Data Export:**
+   - CSV, Excel, PDF options
+   - Scheduled reports
+   - Email delivery
+
+5. **Search & Filter:**
+   - Global search (Cmd/Ctrl+K)
+   - Advanced filters
+   - Saved filter presets
+
+### **🔧 TECHNICAL REQUIREMENTS:**
+
+```javascript
+// Tech Stack
+const techStack = {
+  frontend: {
+    framework: 'React 18+ with TypeScript',
+    styling: 'Tailwind CSS (customized for black/white)',
+    state: 'Zustand',
+    routing: 'React Router v6',
+    charts: 'Recharts (styled monochrome)',
+    tables: 'TanStack Table',
+    forms: 'React Hook Form',
+    animations: 'Framer Motion (subtle)',
+  },
+  features: {
+    auth: 'Google OAuth 2.0',
+    realtime: 'Socket.io',
+    api: 'REST + GraphQL',
+    storage: 'IndexedDB for offline',
+    pwa: 'Workbox'
+  }
+};
+```
+
+### **🎯 KEY VISUAL PRINCIPLES:**
+
+1. **NO COLOR except black/white/gray**
+2. **Typography creates hierarchy, not color**
+3. **White space is the primary design element**
+4. **Subtle shadows define depth (not colors)**
+5. **Icons are minimal line-art style**
+6. **Interaction feedback through opacity/scale, not color**
+7. **Data visualization in grayscale/patterns**
+
+Build this exactly like the Xseize platform shown but with this strict minimal aesthetic. Every purple/blue element becomes black, every colored accent becomes grayscale. The interface should feel premium through its restraint and clarity, not through colors.
+
+---
+
+This prompt will create an exact replica of the Xseize platform functionality with your requested minimal black and white theme, ensuring all features work perfectly across all devices.

@@ -1,0 +1,246 @@
+Based on your original instructions for a **minimal theme with white background and black buttons** (and dark mode with black background and white buttons), here are the corrected style guidelines:
+
+## **✅ CORRECTED Style Guidelines:**
+
+### **Color System:**
+
+**Light Mode (Default):**
+* **Primary color:** Pure Black (#000000) - for all primary buttons and key actions
+* **Background color:** Pure White (#FFFFFF) - clean, minimal backdrop
+* **Surface color:** White (#FFFFFF) with subtle shadows for cards/panels
+* **Secondary color:** Medium Gray (#666666) - for secondary text and icons
+* **Border color:** Light Gray (#E5E5E5) - for subtle divisions
+* **Text Primary:** Near Black (#1A1A1A) - for optimal readability
+* **Text Secondary:** Gray (#666666) - for supporting text
+* **Success:** Green (#10B981) - for positive actions/states
+* **Warning:** Orange (#F59E0B) - for warnings
+* **Error:** Red (#EF4444) - for errors/destructive actions
+
+**Dark Mode:**
+* **Primary color:** Pure White (#FFFFFF) - for all primary buttons and key actions
+* **Background color:** Pure Black (#000000) - true black for OLED optimization
+* **Surface color:** Near Black (#0A0A0A) - for cards/panels with subtle borders
+* **Secondary color:** Light Gray (#A0A0A0) - for secondary text and icons
+* **Border color:** Dark Gray (#2A2A2A) - for subtle divisions
+* **Text Primary:** Pure White (#FFFFFF) - for primary text
+* **Text Secondary:** Light Gray (#A0A0A0) - for supporting text
+* **Success:** Green (#10B981) - consistent across themes
+* **Warning:** Orange (#F59E0B) - consistent across themes
+* **Error:** Red (#EF4444) - consistent across themes
+
+### **Typography:**
+* **Font Family:** 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif
+* **Font Weights:** 400 (regular), 500 (medium), 600 (semibold), 700 (bold)
+* **Font Sizes (Responsive):**
+  - **H1:** clamp(28px, 5vw, 40px)
+  - **H2:** clamp(24px, 4vw, 32px)
+  - **H3:** clamp(20px, 3vw, 24px)
+  - **Body:** clamp(14px, 2vw, 16px)
+  - **Small:** clamp(12px, 1.5vw, 14px)
+* **Line Heights:** 1.5 for body, 1.2 for headings
+* **Letter Spacing:** -0.02em for headings, normal for body
+
+### **Component Styling:**
+
+**Buttons:**
+```css
+/* Light Mode */
+.btn-primary {
+  background: #000000;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: #FFFFFF;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Dark Mode */
+.dark .btn-primary {
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.dark .btn-secondary {
+  background: #000000;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+```
+
+### **Icons:**
+* **Style:** Minimalist line icons with consistent 1.5px stroke width
+* **Size:** 20px (mobile), 18px (desktop)
+* **Color:** Inherit from text color for consistency
+* **Library:** Lucide React or Heroicons (outline variant only)
+
+### **Responsive Breakpoints:**
+```css
+/* Mobile First Approach */
+$breakpoint-xs: 320px;    /* Small phones */
+$breakpoint-sm: 375px;    /* Standard phones */
+$breakpoint-md: 768px;    /* Tablets */
+$breakpoint-lg: 1024px;   /* Desktop */
+$breakpoint-xl: 1440px;   /* Large desktop */
+$breakpoint-2xl: 1920px;  /* 4K displays */
+```
+
+### **Grid System:**
+```css
+/* Responsive Grid */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px; /* Mobile */
+  
+  @media (min-width: 768px) {
+    padding: 0 24px; /* Tablet */
+    max-width: 768px;
+  }
+  
+  @media (min-width: 1024px) {
+    padding: 0 32px; /* Desktop */
+    max-width: 1024px;
+  }
+  
+  @media (min-width: 1440px) {
+    max-width: 1280px; /* Large desktop */
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr; /* Mobile: 1 column */
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columns */
+    gap: 20px;
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(12, 1fr); /* Desktop: 12-column grid */
+    gap: 24px;
+  }
+}
+```
+
+### **Spacing System:**
+```css
+/* Consistent spacing scale */
+--space-xs: 4px;
+--space-sm: 8px;
+--space-md: 16px;
+--space-lg: 24px;
+--space-xl: 32px;
+--space-2xl: 48px;
+--space-3xl: 64px;
+```
+
+### **Animation Guidelines:**
+```css
+/* Performance-optimized animations */
+.transition-default {
+  transition-property: opacity, transform;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-fade-in {
+  animation: fadeIn 300ms ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ensure 60fps by only animating transform and opacity */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+```
+
+### **Shadow System:**
+```css
+/* Light Mode Shadows */
+--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+--shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+--shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+--shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+
+/* Dark Mode (subtle glow) */
+.dark {
+  --shadow-sm: 0 1px 2px rgba(255, 255, 255, 0.05);
+  --shadow-md: 0 0 0 1px rgba(255, 255, 255, 0.1);
+  --shadow-lg: 0 0 0 1px rgba(255, 255, 255, 0.15);
+  --shadow-xl: 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+```
+
+### **Interactive States:**
+```css
+/* Focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Hover states */
+.interactive:hover {
+  transform: translateY(-1px);
+  transition: transform 200ms ease;
+}
+
+/* Active/pressed states */
+.interactive:active {
+  transform: translateY(0);
+}
+
+/* Disabled states */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+```
+
+### **Touch Target Sizes:**
+```css
+/* Minimum touch targets for mobile */
+.touch-target {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+@media (min-width: 1024px) {
+  .touch-target {
+    min-height: 36px;
+    min-width: 36px;
+  }
+}
+```
+
+### **Border Radius:**
+```css
+--radius-sm: 4px;
+--radius-md: 8px;
+--radius-lg: 12px;
+--radius-xl: 16px;
+--radius-full: 9999px;
+```
+
+This corrected style guide maintains the **minimal black and white aesthetic** you requested while ensuring full responsiveness and functionality across all devices. The design will be clean, professional, and distraction-free with optimal performance.

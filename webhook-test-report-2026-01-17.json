@@ -1,0 +1,267 @@
+{
+  "timestamp": "2026-01-17T00:53:52.367Z",
+  "webhookDomain": "https://platform.automitra.ai",
+  "globalAgentStats": {
+    "totalAgents": 4,
+    "successfulSyncs": 0,
+    "notFoundInBolna": 2,
+    "neverSynced": 2
+  },
+  "organizationResults": [
+    {
+      "organizationId": "4da28291-6ca0-4d96-b963-ce9bc2599078",
+      "organizationName": "Megna Test Workspace",
+      "syncAgents": {
+        "success": 0,
+        "notFound": 0,
+        "neverSynced": 0,
+        "total": 0
+      },
+      "callData": {
+        "totalCalls": 0,
+        "callsWithRecordings": 0,
+        "callsWithTranscripts": 0,
+        "completedCalls": 0
+      },
+      "webhookConfig": {
+        "configured": 0,
+        "failed": 0
+      },
+      "callSync": {
+        "synced": 0,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    {
+      "organizationId": "cc25b90c-3e98-4d27-a07f-04308a7cdbce",
+      "organizationName": "Gmail Test Workspace",
+      "syncAgents": {
+        "success": 0,
+        "notFound": 0,
+        "neverSynced": 0,
+        "total": 0
+      },
+      "callData": {
+        "totalCalls": 0,
+        "callsWithRecordings": 0,
+        "callsWithTranscripts": 0,
+        "completedCalls": 0
+      },
+      "webhookConfig": {
+        "configured": 1,
+        "failed": 0
+      },
+      "callSync": {
+        "synced": 0,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    {
+      "organizationId": "19dc415c-0af6-4a1f-bb4a-5ab25d5b1066",
+      "organizationName": "Shaheed.priv's Workspace",
+      "syncAgents": {
+        "success": 0,
+        "notFound": 0,
+        "neverSynced": 0,
+        "total": 0
+      },
+      "callData": {
+        "totalCalls": 0,
+        "callsWithRecordings": 0,
+        "callsWithTranscripts": 0,
+        "completedCalls": 0
+      },
+      "webhookConfig": {
+        "configured": 0,
+        "failed": 0
+      },
+      "callSync": {
+        "synced": 0,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    {
+      "organizationId": "df7ce2f8-72d5-4112-8424-caef6bd5aea6",
+      "organizationName": "Abhishek456v's Workspace",
+      "syncAgents": {
+        "success": 0,
+        "notFound": 0,
+        "neverSynced": 0,
+        "total": 0
+      },
+      "callData": {
+        "totalCalls": 0,
+        "callsWithRecordings": 0,
+        "callsWithTranscripts": 0,
+        "completedCalls": 0
+      },
+      "webhookConfig": {
+        "configured": 0,
+        "failed": 0
+      },
+      "callSync": {
+        "synced": 0,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    {
+      "organizationId": "29f712ed-1f02-45f9-bcf7-c587220c18ac",
+      "organizationName": "Abhishek456v's Workspace",
+      "syncAgents": {
+        "success": 0,
+        "notFound": 0,
+        "neverSynced": 0,
+        "total": 0
+      },
+      "callData": {
+        "totalCalls": 0,
+        "callsWithRecordings": 0,
+        "callsWithTranscripts": 0,
+        "completedCalls": 0
+      },
+      "webhookConfig": {
+        "configured": 0,
+        "failed": 0
+      },
+      "callSync": {
+        "synced": 0,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    {
+      "organizationId": "c2ea56a6-5e64-4fa9-9f18-22fe209f3883",
+      "organizationName": "Abhishek456v's Workspace",
+      "syncAgents": {
+        "success": 0,
+        "notFound": 0,
+        "neverSynced": 0,
+        "total": 0
+      },
+      "callData": {
+        "totalCalls": 0,
+        "callsWithRecordings": 0,
+        "callsWithTranscripts": 0,
+        "completedCalls": 0
+      },
+      "webhookConfig": {
+        "configured": 0,
+        "failed": 0
+      },
+      "callSync": {
+        "synced": 0,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    {
+      "organizationId": "0137feb2-f212-45f5-9d4f-3e0d9fadc9aa",
+      "organizationName": "Wrighttodebargha03's Workspace",
+      "syncAgents": {
+        "success": 0,
+        "notFound": 0,
+        "neverSynced": 0,
+        "total": 0
+      },
+      "callData": {
+        "totalCalls": 0,
+        "callsWithRecordings": 0,
+        "callsWithTranscripts": 0,
+        "completedCalls": 0
+      },
+      "webhookConfig": {
+        "configured": 0,
+        "failed": 0
+      },
+      "callSync": {
+        "synced": 0,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    {
+      "organizationId": "d7cd4a1a-e597-474f-bdcb-ce54b1e610a7",
+      "organizationName": "Debarghamukhuty's Workspace",
+      "syncAgents": {
+        "success": 0,
+        "notFound": 0,
+        "neverSynced": 0,
+        "total": 0
+      },
+      "callData": {
+        "totalCalls": 0,
+        "callsWithRecordings": 0,
+        "callsWithTranscripts": 0,
+        "completedCalls": 0
+      },
+      "webhookConfig": {
+        "configured": 0,
+        "failed": 0
+      },
+      "callSync": {
+        "synced": 0,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    {
+      "organizationId": "9c9a69e1-0c9d-44d1-adb3-52ee0aff9e2d",
+      "organizationName": "Calebolo's Workspace",
+      "syncAgents": {
+        "success": 0,
+        "notFound": 0,
+        "neverSynced": 0,
+        "total": 0
+      },
+      "callData": {
+        "totalCalls": 0,
+        "callsWithRecordings": 0,
+        "callsWithTranscripts": 0,
+        "completedCalls": 0
+      },
+      "webhookConfig": {
+        "configured": 0,
+        "failed": 0
+      },
+      "callSync": {
+        "synced": 0,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    {
+      "organizationId": "4c060791-07e4-4555-b57e-c1f16650a7f3",
+      "organizationName": "Wrighttodebargha03's Workspace",
+      "syncAgents": {
+        "success": 0,
+        "notFound": 0,
+        "neverSynced": 0,
+        "total": 0
+      },
+      "callData": {
+        "totalCalls": 13,
+        "callsWithRecordings": 0,
+        "callsWithTranscripts": 0,
+        "completedCalls": 0
+      },
+      "webhookConfig": {
+        "configured": 1,
+        "failed": 0
+      },
+      "callSync": {
+        "synced": 0,
+        "skipped": 0,
+        "failed": 0
+      }
+    }
+  ],
+  "summary": {
+    "totalOrganizations": 10,
+    "totalCalls": 13,
+    "totalWebhooksConfigured": 2
+  }
+}

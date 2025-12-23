@@ -1,0 +1,192 @@
+Based on your comprehensive proposal, here's a detailed prompt to build this AI Voice & Chat Automation Platform:
+
+---
+
+## **Prompt: Build AI Voice & Chat Automation Platform**
+
+Create a modern, multi-tenant SaaS platform for AI-powered voice and chat automation with the following specifications:
+
+### **Core Platform Requirements:**
+
+**1. Authentication & Multi-tenancy**
+- Implement Google OAuth 2.0 SSO for authentication
+- Auto-provision client workspaces on first Google account login
+- Role-based access control (Admin, Sales Agent, Site Manager, Sourcing Manager)
+- Secure session management with JWT tokens
+
+**2. Dashboard Architecture**
+Build 4 role-specific dashboards:
+
+**Admin Dashboard:**
+- Campaign creation and management interface
+- Bulk data upload (CSV/Excel) for leads and channel partners
+- User management and role assignment
+- System configuration settings
+- Full analytics access with export capabilities (CSV, Excel, PDF)
+- Access to all recordings and transcripts
+
+**Sales Agent Dashboard:**
+- Assigned lead queue with AI conversation summaries
+- Integrated click-to-call dialer
+- Call scripts and notes management
+- Follow-up scheduling with calendar integration
+- Personal performance metrics
+- Recording playback and transcript review
+
+**Site Manager Dashboard:**
+- Visit scheduling interface
+- Meeting transcript access
+- Site visit summaries
+- Inspector assignment functionality
+- Visit status tracking with timeline view
+
+**Sourcing Manager Dashboard:**
+- Channel partner management (support for 60,000+ partners)
+- Advanced filtering (Engaged/Interested/Inactive status)
+- Interaction history timeline
+- Bulk communication tools
+- Performance analytics with visual charts
+- Smart reminder system
+
+**3. AI Integration Features**
+- Voice Agent integration (via Exotel API for telephony)
+- WhatsApp Agent for text conversations
+- Shared memory system for context continuity across channels
+- Lead qualification flows with dynamic scripting
+- Live call transfer with context handoff
+- Meeting recorder with AI transcription and summary generation
+
+**4. Campaign Management**
+- Campaign creation wizard
+- Lead assignment and routing
+- Automated scheduling
+- Real-time status tracking
+- Campaign performance metrics
+
+**5. Analytics & Reporting**
+- Real-time call metrics dashboard
+- Response rates and conversion funnels
+- Engagement heatmaps
+- Agent performance reports
+- ROI tracking
+- Customizable date range filters
+
+### **UI/UX Design Requirements:**
+
+**Design System:**
+```
+MINIMAL THEME SPECIFICATIONS:
+
+Light Mode (Default):
+- Background: #FFFFFF (pure white)
+- Primary buttons: #000000 (pure black) with white text
+- Secondary buttons: White with black border (1px)
+- Text: #1A1A1A (near black) for primary, #666666 for secondary
+- Cards/Panels: White with subtle shadow (box-shadow: 0 1px 3px rgba(0,0,0,0.12))
+- Borders: #E5E5E5 (light gray)
+- Hover states: Black buttons → 90% opacity
+- Focus states: 2px black outline
+
+Dark Mode:
+- Background: #000000 (pure black)
+- Primary buttons: #FFFFFF (pure white) with black text
+- Secondary buttons: Black with white border (1px)
+- Text: #FFFFFF for primary, #A0A0A0 for secondary
+- Cards/Panels: #0A0A0A with subtle white border
+- Borders: #2A2A2A (dark gray)
+- Hover states: White buttons → 90% opacity
+- Focus states: 2px white outline
+
+Typography:
+- Font family: Inter, system-ui, -apple-system, sans-serif
+- Headings: Bold, sizes 24px, 20px, 18px
+- Body: Regular 14px
+- Small text: 12px
+
+Layout Principles:
+- Maximum content width: 1440px centered
+- Consistent 24px padding on containers
+- 16px spacing between elements
+- Clean data tables with alternating row colors
+- Minimal use of icons (only where essential)
+- No decorative elements
+- Clear visual hierarchy through spacing and typography
+```
+
+**Component Specifications:**
+- Clean navigation sidebar (collapsible)
+- Minimal header with user profile and theme toggle
+- Card-based layouts for data presentation
+- Simple form inputs with clear labels
+- Data tables with sorting and filtering
+- Modal dialogs for actions
+- Toast notifications (top-right corner)
+- Loading states with simple spinners
+
+### **Technical Implementation:**
+
+**Frontend Stack:**
+- React 18+ with TypeScript
+- Tailwind CSS for styling
+- React Query for API state management
+- React Hook Form for forms
+- Recharts for analytics visualizations
+- Socket.io for real-time updates
+- Theme toggle with localStorage persistence
+
+**Backend Requirements:**
+- RESTful API architecture
+- WebSocket support for real-time features
+- Database schema for multi-tenant data isolation
+- Redis for caching and session management
+- S3-compatible storage for recordings
+- Queue system for async operations
+
+**Key Features to Implement:**
+
+1. **Data Upload Module:**
+   - Drag-and-drop file upload
+   - CSV/Excel parsing with validation
+   - Preview before import
+   - Progress indicators
+
+2. **Real-time Updates:**
+   - Live call status updates
+   - Notification badges
+   - Activity feed
+   - WebSocket-powered dashboard updates
+
+3. **Export Functionality:**
+   - Generate CSV, Excel, PDF reports
+   - Customizable export templates
+   - Scheduled exports
+
+4. **Search & Filter System:**
+   - Global search across all entities
+   - Advanced filters with save capability
+   - Quick filters for common queries
+
+5. **Theme Switcher:**
+   - Smooth transition between modes
+   - System preference detection
+   - Per-user preference storage
+
+### **Performance Requirements:**
+- Dashboard load time < 3 seconds
+- API response time < 500ms
+- Support 1000+ concurrent users
+- Smooth animations (60 fps)
+- Responsive design (mobile, tablet, desktop)
+
+### **Security Features:**
+- HTTPS only
+- CSRF protection
+- Rate limiting
+- Input sanitization
+- Audit logging for all actions
+
+Build this platform with clean, maintainable code following best practices. The interface should feel professional, fast, and intuitive with the minimal aesthetic providing clarity and focus on functionality over decoration. Every interaction should feel responsive and deliberate, with clear feedback for user actions.
+
+---
+
+This prompt provides comprehensive specifications for building the platform with AI assistance, emphasizing the minimal design theme you requested while covering all the functional requirements from your proposal.
