@@ -562,11 +562,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(404).json({ message: "User not found" });
       }
 
-      // Note: Using Plivo through Bolna only - phone numbers are synced via phoneNumberSync.ts
-      const existingNumbers = await storage.getPhoneNumbers(user.organizationId);
-      console.log('[Phone Sync] Using Plivo through Bolna - existing numbers:', existingNumbers.map(n => n.phoneNumber));
+      // Trigger actual sync from Bolna
+      console.log('[Phone Sync] Triggering manual sync from Bolna for org:', user.organizationId);
+      const syncResults = await syncOrganizationPhoneNumbers(user.organizationId);
+      
+      // Get updated numbers from database
+      const updatedNumbers = await storage.getPhoneNumbers(user.organizationId);
+      console.log('[Phone Sync] Sync complete - Created:', syncResults.created, 'Updated:', syncResults.updated, 'Total:', updatedNumbers.length);
 
-      res.json({ syncedNumbers: existingNumbers, total: existingNumbers.length });
+      res.json({ 
+        syncedNumbers: updatedNumbers, 
+        total: updatedNumbers.length,
+        created: syncResults.created,
+        updated: syncResults.updated,
+        errors: syncResults.errors
+      });
     } catch (error) {
       console.error("Error syncing phone numbers:", error);
       res.status(500).json({ message: "Failed to sync phone numbers" });

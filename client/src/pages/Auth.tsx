@@ -88,7 +88,7 @@ export default function Auth({ mode }: AuthProps) {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center shadow-lg shadow-purple-500/20">
               <Sparkles className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200">auto mitra ai</span>
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200">Xseize</span>
           </div>
         </div>
 
