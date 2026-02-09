@@ -524,8 +524,8 @@ export class BolnaClient {
 
       // Ensure webhook URL is set if not provided
       if (!config.agent_config.webhook_url) {
-        // Use env var or default to platform.automitra.ai
-        const envUrl = process.env.PUBLIC_WEBHOOK_URL || "https://platform.automitra.ai";
+        // Use env var or default to platform.xseize.ai
+        const envUrl = process.env.PUBLIC_WEBHOOK_URL || "https://platform.xseize.ai";
         const baseUrl = this.normalizeWebhookUrl(envUrl);
         config.agent_config.webhook_url = baseUrl ? `${baseUrl}/api/webhooks/bolna/call-status` : null;
       } else {
@@ -694,7 +694,7 @@ export class BolnaClient {
     if ((agentData as any).webhookUrl) {
       webhookUrl = this.normalizeWebhookUrl((agentData as any).webhookUrl);
     } else {
-      const envUrl = process.env.PUBLIC_WEBHOOK_URL || "https://platform.automitra.ai";
+      const envUrl = process.env.PUBLIC_WEBHOOK_URL || "https://platform.xseize.ai";
       const baseUrl = this.normalizeWebhookUrl(envUrl);
       webhookUrl = baseUrl ? `${baseUrl}/api/webhooks/bolna/call-status` : null;
     }
@@ -985,7 +985,7 @@ export class BolnaClient {
     } else if (baseAgentConfig.webhook_url) {
       webhookUrl = this.normalizeWebhookUrl(baseAgentConfig.webhook_url);
     } else {
-      const envUrl = process.env.PUBLIC_WEBHOOK_URL || "https://platform.automitra.ai";
+      const envUrl = process.env.PUBLIC_WEBHOOK_URL || "https://platform.xseize.ai";
       const baseUrl = this.normalizeWebhookUrl(envUrl);
       webhookUrl = baseUrl ? `${baseUrl}/api/webhooks/bolna/call-status` : null;
     }

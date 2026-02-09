@@ -739,8 +739,8 @@ export async function setupAuth(app: Express) {
       const sanitizedEmail = sanitizeInput(email.toLowerCase());
       const sanitizedName = sanitizeInput(fullName);
 
-      // Get redirect URL for email verification (defaults to platform.automitra.ai)
-      const authRedirectUrl = process.env.AUTH_REDIRECT_URL || process.env.SITE_URL || "https://platform.automitra.ai";
+      // Get redirect URL for email verification (defaults to platform.xseize.ai)
+      const authRedirectUrl = process.env.AUTH_REDIRECT_URL || process.env.SITE_URL || "https://platform.xseize.ai";
 
       // Create user in Supabase
       const { data, error } = await supabaseAuthClient.auth.signUp({

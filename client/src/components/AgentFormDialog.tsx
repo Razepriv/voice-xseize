@@ -125,7 +125,7 @@ export const AgentFormDialog: React.FC<AgentFormDialogProps> = ({
       backchannelingMessageGap: 5,
       backchannelingStartDelay: 5,
       callTerminate: 90,
-      webhookUrl: "https://platform.automitra.ai/api/webhooks/bolna/call-status",
+      webhookUrl: "https://platform.xseize.ai/api/webhooks/bolna/call-status",
       ...initialValues,
     },
     values: initialValues,
@@ -1768,7 +1768,7 @@ export const AgentFormDialog: React.FC<AgentFormDialogProps> = ({
                             <Input
                               {...field}
                               disabled
-                              placeholder="https://platform.automitra.ai/api/webhooks/bolna/call-status"
+                              placeholder="https://platform.xseize.ai/api/webhooks/bolna/call-status"
                             />
                           </FormControl>
                           <FormDescription>
